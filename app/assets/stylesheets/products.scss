@@ -73,4 +73,14 @@ main section.products-show {
   }
 }
 
-
+/* The alert message box */
+.alert {
+  padding: 20px;
+  color: black;
+  margin-bottom: 15px;
+  border: 3px solid red;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}

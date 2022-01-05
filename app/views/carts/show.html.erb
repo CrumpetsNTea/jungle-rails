@@ -1,3 +1,5 @@
+
+<% if enhanced_cart.length > 0 %>
 <section class="cart-show">
 
   <header class="page-header">
@@ -25,7 +27,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
@@ -50,3 +52,11 @@
   </div>
 
 </section>
+
+<% else %>
+
+<h4 class="alert">
+Oops!<br/>
+It looks like your cart is empty, let's add some <%= link_to " items!", "/", class: 'css_class', style: 'margin-left:5px' %>
+</h4>
+<% end %>
