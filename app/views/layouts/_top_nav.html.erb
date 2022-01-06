@@ -26,7 +26,6 @@
           </ul>
         </li>
         <li><%= link_to 'About Us', :about_index %></li>
-
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
@@ -39,7 +38,6 @@
             <li><%= link_to 'Dashboard', [:admin, :root] %></li>
             <li><%= link_to 'Products',  [:admin, :products] %></li>
             <li><%= link_to 'Categories',  [:admin, :categories] %></li>
-
           </ul>
         </li>
         <li>
@@ -47,6 +45,12 @@
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
+        <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+            <% else %>
+              <li><%= link_to 'Login', '/login' %></li>  
+              <li><%= link_to 'Signup', '/signup' %></li>
+          <% end %>
       </ul>
     </div>
   </div>
