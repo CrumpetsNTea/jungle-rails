@@ -1,0 +1,21 @@
+.admin-dashboard-title {
+  border-bottom:1px solid lightgray; 
+  padding-bottom: 10px;
+}
+
+.admin-dashboard-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-dashboard-title {
+  font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+    margin: 0.67em 0;
+    border-bottom: 1px solid #eeeeee;
+}
