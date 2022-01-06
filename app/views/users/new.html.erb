@@ -1,17 +1,20 @@
 
-<div>
-<h1>Register:</h1>
+<body>
+<div class="register-form">
+<h1 class="register">Register:</h1>
 
-
+<div class="list">
 <ul class="sign-in-form">
 <%= form_for :user, url: '/users' do |f| %>
-  <li><h5>Name:</h5> <%= f.text_field :name %></li>
-  <li><h5>Email:</h5> <%= f.text_field :email %></li>
-  <li><h5>Password:</h5> <%= f.password_field :password %></li>
-  <li><h5>Password Confirmation:</h5> <%=  f.password_field :password_confirmation %></li>
+  <li>Name: <%= f.text_field :name %></li>
+  <li class="email">Email: <%= f.text_field :email %></li>
+  <li class="password">Password: <%= f.password_field :password %></li>
+  <li class="password-confirmation"><p class="password-confirmation-text">Password Confirmation:</p> <%=  f.password_field :password_confirmation %></li>
   <li class="button"><%= f.submit "Submit" %></li>
   <% end %>
 </ul>
-
-<img src="https://cdn.pixabay.com/photo/2016/04/01/09/52/cartoon-1299636_960_720.png">
 </div>
+</div>
+<img src="https://cdn.pixabay.com/photo/2016/04/01/09/52/cartoon-1299636_960_720.png">
+
+</body>
