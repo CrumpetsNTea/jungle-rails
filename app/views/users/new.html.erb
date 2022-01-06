@@ -4,17 +4,17 @@
 <h1 class="register">Register:</h1>
 
 <div class="list">
-<ul class="sign-in-form">
+<%# <ul class="sign-in-form"> %>
 <%= form_for :user, url: '/users' do |f| %>
-  <li>Name: <%= f.text_field :name %></li>
-  <li class="email">Email: <%= f.text_field :email %></li>
-  <li class="password">Password: <%= f.password_field :password %></li>
-  <li class="password-confirmation"><p class="password-confirmation-text">Password Confirmation:</p> <%=  f.password_field :password_confirmation %></li>
-  <li class="button"><%= f.submit "Submit" %></li>
+  <h5>Name: <%= f.text_field :name %></h5>
+  <h5 class="email">Email: <%= f.text_field :email %></h5>
+  <h5 class="password">Password: <%= f.password_field :password %></h5>
+  <h5 class="password-confirmation">Password Confirmation: <%=  f.password_field :password_confirmation %></h5>
+  <h5 class="button"><%= f.submit "Submit" %></h5>
   <% end %>
-</ul>
+<%# </ul> %>
 </div>
 </div>
-<img src="https://cdn.pixabay.com/photo/2016/04/01/09/52/cartoon-1299636_960_720.png">
+<img class="chef-kiss" src="https://cdn.pixabay.com/photo/2016/04/01/09/52/cartoon-1299636_960_720.png">
 
 </body>
