@@ -1,8 +1,11 @@
+
+
 .register-form {
   display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-start;
+// flex-direction: column;
+align-items: center;
+justify-content: center;
+
 }
 
 .sign-in-form {
@@ -16,12 +19,10 @@ padding-right: 5rem;
 }
 
 .password {
-  padding-right: 20rem;
   padding-top: 1rem;
 }
 
 .password-confirmation {
-  padding-right: 6.6rem;
   padding-top: 1rem;
 }
 
@@ -32,9 +33,4 @@ padding-right: 5rem;
 
 .button {
   padding-top: 1rem;
-padding-left: 27rem;
-}
-
-.chef-kiss {
-  float: right;
 }
