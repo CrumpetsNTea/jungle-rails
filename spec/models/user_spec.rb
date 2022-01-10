@@ -48,19 +48,20 @@ RSpec.describe User, type: :model do
       expect(@user).to be_invalid
     end
     it 'should not allow a user to be created with a duplicate email' do
-      @user1 = User.new(
+      @user1 = User.create(
         name: 'Alan Rickman',
-        email: 'alanrickman@gmail.com',
+        email: 'alanrickman2@gmail.com',
         password: 'abcd',
         password_confirmation: 'abcd'
       )
 
       @user2 = User.new(
         name: 'Alan Rickman',
-        email: 'alanrickman@gmail.com',
+        email: 'alanrickman2@gmail.com',
         password: 'abcd',
         password_confirmation: 'abcd'
       )
+      expect(@user1).to be_valid
       expect(@user2).to be_invalid
       expect(@user2.errors.full_messages).to include ("Email has already been taken")
     end
