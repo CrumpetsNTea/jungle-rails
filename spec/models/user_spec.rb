@@ -55,7 +55,7 @@ RSpec.describe User, type: :model do
         password_confirmation: 'abcd'
       )
 
-      @user2 = User.new(
+      @user2 = User.create(
         name: 'Alan Rickman',
         email: 'alanrickman2@gmail.com',
         password: 'abcd',
@@ -85,7 +85,6 @@ RSpec.describe User, type: :model do
         password: 'dimmadome',
         password_confirmation: 'dimmadome'
       )
-      @user.save!
       expect(User.authenticate_with_credentials("nottherightemail@gmail.com", @user.password)).to eq(nil)
     end
     it 'should not authenticate when password is incorrect' do
@@ -95,7 +94,6 @@ RSpec.describe User, type: :model do
         password: 'dimmadome',
         password_confirmation: 'dimmadome'
       )
-      @user.save!
       expect(User.authenticate_with_credentials(@user.email, 'nottherightpassword')).to eq(nil)
     end
     it 'should authenticate a user if email is not in the right case' do
